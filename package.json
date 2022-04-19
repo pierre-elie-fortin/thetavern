@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "netlify-cms-app": "^2.15.72",
     "vue": "^3.2.33",
     "vue-router": "^4.0.14"
   },
