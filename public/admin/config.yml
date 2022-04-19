@@ -6,15 +6,102 @@ media_folder: src/static/images/uploads
 public_folder: /images/uploads
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "beer" # Used in routes, e.g., /admin/collections/blog
+    label: "Bières" # Used in the UI
+    description: "The rock tavern binouze"
+    files:
+      - label: "Nos Bières"
+        name: "Beer"
+        file: "data/beers.json"
+        fields:
+          - label: "Liste des bières"
+            name: "beerList"
+            widget: "list"
+            fields: # The fields for each document, usually in front matter
+              - { label: "Nom de la bière", name: "beerName", widget: "string" }
+              - { label: "Type de bière", name: "beerType", widget: "string" }
+              - { label: "Degrée de la bière", name: "degree", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+              - { label: "Prix du demi", name: "half", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+              - { label: "Prix de la pinte", name: "pint", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+              - { label: "Prix en Happy", name: "happy", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+  - name: "events" # Used in routes, e.g., /admin/collections/blog
+    label: "Evènements" # Used in the UI
+    description: "Les prochains évènements"
+    files:
+      - label: "Nos évènements"
+        name: "Event"
+        file: "data/events.json"
+        fields:
+          - label: "Liste des évènements"
+            name: "eventList"
+            widget: "list"
+            fields:
+              - { label: "Nom de l'évènement", name: "eventName", widget: "string" }
+              - {label: "Active", name: "active", widget: "boolean", default: true}
+              - { label: Image, name: image, widget: image }
+  - name: "toShare" # Used in routes, e.g., /admin/collections/blog
+    label: "A partager" # Used in the UI
+    description: "La junk food"
+    files:
+      - label: "Nos plats à partager"
+        name: "ToShare"
+        file: "data/toshares.json"
+        fields:
+          - label: "Liste des plats"
+            name: "toShareList"
+            widget: "list"
+            fields: # The fields for each document, usually in front matter
+              - { label: "Nom du plat", name: "toShareName", widget: "string" }
+              - { label: "Prix", name: "price", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+              - {label: "Description", name: "description", widget: "text"}
+  - name: "rhum" # Used in routes, e.g., /admin/collections/blog
+    label: "Rhums" # Used in the UI
+    description: "The rock tavern rhums"
+    files:
+      - label: "Nos Rhums"
+        name: "Beer"
+        file: "data/rhums.json"
+        fields:
+          - label: "Liste des rhums"
+            name: "rhumList"
+            widget: "list"
+            fields: # The fields for each document, usually in front matter
+              - { label: "Nom du rhum", name: "rhumName", widget: "string" }
+              - { label: "Degrée de la bière", name: "degree", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+              - { label: "Prix du rhum", name: "rhum", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+  - name: "longDrink" # Used in routes, e.g., /admin/collections/blog
+    label: "Cocktails" # Used in the UI
+    description: "The rock tavern cocktails"
+    files:
+      - label: "Nos Cocktails"
+        name: "Longs"
+        file: "data/longs.json"
+        fields:
+          - label: "Liste des cocktails"
+            name: "longList"
+            widget: "list"
+            fields: # The fields for each document, usually in front matter
+              - { label: "Nom du cocktail", name: "longName", widget: "string" }
+              - { label: "Prix", name: "degree", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+              - { label: "Happy", name: "happy", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+  - name: "soft" # Used in routes, e.g., /admin/collections/blog
+    label: "Softs" # Used in the UI
+    description: "The rock tavern softs"
+    files:
+      - label: "Nos Softs"
+        name: "Softs"
+        file: "data/softs.json"
+        fields:
+          - label: "Liste des softs"
+            name: "softList"
+            widget: "list"
+            fields: # The fields for each document, usually in front matter
+              - { label: "Nom du soft", name: "softName", widget: "string" }
+              - { label: "Prix", name: "degree", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+              - { label: "Happy", name: "happy", widget: "number", value_type: "float", min: 0, max: 101,step: 0.1 }
+
+
+
+
+
+
