@@ -1,0 +1,20 @@
+{
+  "beerList": [
+    {
+      "beerName": "Margaret Johnson",
+      "beerType": "Dolorem aut fuga Au",
+      "degree": 15,
+      "half": 29,
+      "pint": 35,
+      "happy": 57
+    },
+    {
+      "beerName": "Odessa Ortiz",
+      "beerType": "Architecto consequat",
+      "degree": 39,
+      "half": 81,
+      "pint": 19,
+      "happy": 16
+    }
+  ]
+}
