@@ -15,6 +15,14 @@
       "half": 81,
       "pint": 19,
       "happy": 16
+    },
+    {
+      "beerName": "Odette Medina",
+      "beerType": "Ut voluptatem repre",
+      "degree": 34,
+      "half": 26,
+      "pint": 42,
+      "happy": 55
     }
   ]
 }
