@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Nos Bières"
         name: "Beer"
-        file: "data/beers.json"
+        file: "public/json/beers.json"
         fields:
           - label: "Liste des bières"
             name: "beerList"
@@ -30,7 +30,7 @@ collections:
     files:
       - label: "Nos évènements"
         name: "Event"
-        file: "data/events.json"
+        file: "public/json/events.json"
         fields:
           - label: "Liste des évènements"
             name: "eventList"
@@ -45,7 +45,7 @@ collections:
     files:
       - label: "Nos plats à partager"
         name: "ToShare"
-        file: "data/toshares.json"
+        file: "public/json/toshares.json"
         fields:
           - label: "Liste des plats"
             name: "toShareList"
@@ -60,7 +60,7 @@ collections:
     files:
       - label: "Nos Rhums"
         name: "Beer"
-        file: "data/rhums.json"
+        file: "public/json/rhums.json"
         fields:
           - label: "Liste des rhums"
             name: "rhumList"
@@ -75,7 +75,7 @@ collections:
     files:
       - label: "Nos Cocktails"
         name: "Longs"
-        file: "data/longs.json"
+        file: "public/json/longs.json"
         fields:
           - label: "Liste des cocktails"
             name: "longList"
@@ -90,7 +90,7 @@ collections:
     files:
       - label: "Nos Softs"
         name: "Softs"
-        file: "data/softs.json"
+        file: "public/json/softs.json"
         fields:
           - label: "Liste des softs"
             name: "softList"
