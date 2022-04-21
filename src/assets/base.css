@@ -22,8 +22,16 @@
 }
 
 :root {
- --font-size-title:  50px;
+ --font-size-title: 60px;
   --gutter: 16px
+}
+/* size screen */
+:root {
+ --xs: 480px;
+  --s: 768px;
+  --m: 992px;
+  --l: 1200px;
+  --xl: 1500px;
 }
 
 /* semantic color variables for this project */
