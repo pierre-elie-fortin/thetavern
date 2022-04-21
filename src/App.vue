@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Beers from "@/components/beers/Beers.vue";
+import HomePage from "@/components/HomePage.vue";
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <Beers></Beers>
+      <HomePage></HomePage>
     </div>
   </header>
 </template>
@@ -20,13 +20,10 @@ import Beers from "@/components/beers/Beers.vue";
   font-weight: normal;
 }
 
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-
+body {
+  background-color: var(--vt-c-black-soft);
 }
+
+
+
 </style>
