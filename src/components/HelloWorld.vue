@@ -1,12 +1,23 @@
-<script setup lang="ts">
-defineProps<{
-  msg: string;
-}>();
+<script lang="ts">
+import usersData from './../data/beers.json';
+
+export default {
+  data() {
+    return {
+      users: usersData,
+    };
+  },
+};
 </script>
+
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <ul>
+      <li v-for="user in users" :key="user.id">
+        {{user}}
+      </li>
+    </ul>
     <h3>
       You’ve successfully created a project with
       <a target="_blank" href="https://vitejs.dev/">Vite</a> +

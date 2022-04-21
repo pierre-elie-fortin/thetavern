@@ -12,7 +12,7 @@ collections:
     files:
       - label: "Nos Bières"
         name: "Beer"
-        file: "public/json/beers.json"
+        file: "src/data/beers.json"
         fields:
           - label: "Liste des bières"
             name: "beerList"
