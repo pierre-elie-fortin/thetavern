@@ -21,6 +21,11 @@
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
 }
 
+:root {
+ --font-size-title:  50px;
+  --gutter: 16px
+}
+
 /* semantic color variables for this project */
 :root {
   --color-background: var(--vt-c-white);
