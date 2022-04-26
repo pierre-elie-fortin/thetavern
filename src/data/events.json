@@ -1,3 +1,14 @@
 {
-  "eventList": []
+  "eventList": [
+    {
+      "active": false,
+      "eventName": "pef",
+      "image": "public/images/uploads/img_20200125_234217_049.jpg"
+    },
+    {
+      "active": true,
+      "eventName": "test",
+      "image": "public/images/uploads/7s1k74mw-595x842.jpeg"
+    }
+  ]
 }
