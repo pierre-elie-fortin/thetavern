@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-media_folder: src/static/images/uploads
-public_folder: /images/uploads
+media_folder: public/images/uploads
+public_folder: public/images/uploads
 
 collections:
   - name: "beer" # Used in routes, e.g., /admin/collections/blog
