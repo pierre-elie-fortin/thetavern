@@ -18,7 +18,7 @@ let events: iEvents[] = eventsData.eventList
     <div class="media_content">
       <div class="content" v-for="event in events" :key="event.eventName">
         <div v-if="event.active">
-          <img class="image" :src="event.image" alt="my-logo"/>
+          <img class="image" :src="event.image" :alt="event.eventName"/>
         </div>
       </div>
     </div>
