@@ -23,6 +23,14 @@
       "half": 26,
       "pint": 42,
       "happy": 55
+    },
+    {
+      "beerName": "Ila Acevedo",
+      "beerType": "Iste ut veritatis im",
+      "degree": 15,
+      "half": 6,
+      "pint": 28,
+      "happy": 72
     }
   ]
 }
