@@ -1,32 +1,85 @@
-<script lang="ts">
-import beersData from './../../data/beers.json';
+<script setup lang="ts">
+import beersData from '@/data/beers.json';
 
-interface Props {
+interface iBeers {
   beerName: string | undefined
   beerType: string | undefined
+  degree: number | undefined
+  half: number | undefined
+  pint: number | undefined
+  happy: number | undefined
 }
 
-export default {
-  data() {
-    return {
-      beers: beersData.beerList,
-    };
-  },
-};
+let beers: iBeers[] = beersData.beerList
 </script>
 
 
 <template>
-  <ul>
-    <li v-for="beer in beers" :key="beer.id">
-      {{ beer.beerName }}
-    </li>
-  </ul>
-  <p v-if="loading">
-    Still loading..
-  </p>
-  <p v-if="error">
-  </p>
+  <div class="wrapper">
+    <h3>Nos bières</h3>
+    <div class="media_content">
+      <div class="content" v-for="beer in beers" :key="beer.beerName">
+        <div class="price">
+          <span class="info">{{ beer.beerName }}</span>
+          <span class="info">{{ beer.half }}€</span>
+          <span class="info">{{ beer.pint }}€</span>
+          <span>{{ beer.happy }}HH</span>
+        </div>
+        <div class="description">
+          <span class="info">{{ beer.beerType }}</span>
+          <span>{{ beer.degree }}°</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </template>
+
+<style scoped>
+h3 {
+  color: white;
+  font-size: var(--font-size-title);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.media_content{
+  margin-top: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.description {
+  color: #548CA8;
+}
+
+.info {
+  margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .media_content {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+  .content {
+    flex: 1 0 40%;
+    font-size: 22px;
+    margin: 5px 5px 16px;
+    display: flex;
+    align-items: center;
+  }
+}
+</style>
 
 
