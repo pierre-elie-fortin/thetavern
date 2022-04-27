@@ -1,3 +1,14 @@
 {
-  "eventList": []
+  "eventList": [
+    {
+      "active": true,
+      "eventName": "pef",
+      "image": "public/images/uploads/7s1k74mw-595x842.jpeg"
+    },
+    {
+      "active": true,
+      "eventName": "paif",
+      "image": "public/images/uploads/trashville_a3-595x842.jpg"
+    }
+  ]
 }
