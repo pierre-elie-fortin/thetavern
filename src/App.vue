@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import HomePage from "@/components/HomePage.vue";
+import HomePage from "@/views/HomePage.vue";
 </script>
 
 <template>
@@ -23,7 +23,4 @@ import HomePage from "@/components/HomePage.vue";
 body {
   background-color: var(--vt-c-black-soft);
 }
-
-
-
 </style>
