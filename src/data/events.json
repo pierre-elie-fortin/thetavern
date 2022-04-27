@@ -1,3 +1,14 @@
 {
-  "eventList": []
+  "eventList": [
+    {
+      "active": true,
+      "eventName": "pef",
+      "image": "images/uploads/nft.png"
+    },
+    {
+      "active": true,
+      "eventName": "ddzdz",
+      "image": "images/uploads/thumb-1920-1152403.jpg"
+    }
+  ]
 }
