@@ -1,14 +1,3 @@
 {
-  "eventList": [
-    {
-      "active": true,
-      "eventName": "pef and the gang",
-      "image": "public/images/uploads/7s1k74mw-595x842.jpeg"
-    },
-    {
-      "active": true,
-      "eventName": "pef and the bitch",
-      "image": "public/images/uploads/trashville_a3-595x842.jpg"
-    }
-  ]
+  "eventList": []
 }
