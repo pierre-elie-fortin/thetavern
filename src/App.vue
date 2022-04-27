@@ -21,6 +21,6 @@ import HomePage from "@/views/HomePage.vue";
 }
 
 body {
-  background-color: var(--vt-c-black-soft);
+  background-color: var(--color-background-app);
 }
 </style>

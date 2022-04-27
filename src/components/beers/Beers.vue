@@ -36,15 +36,25 @@ let beers: iBeers[] = beersData.beerList
 </template>
 
 <style scoped>
+body{
+
+}
+
 h3 {
   color: white;
   font-size: var(--font-size-title);
+
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  background-color: var(--color-background-menu);
+  width: 100%;
+  margin-top: var(--gutter-m);
+  box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.3);
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
 }
 
 .media_content{

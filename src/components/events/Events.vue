@@ -34,13 +34,14 @@ h3 {
 .wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  margin-top: var(--gutter-m);
 }
 
 .content {
   display: flex;
   justify-content: center;
-  padding: 10px
+  padding: 10px;
 }
 
 .image {
