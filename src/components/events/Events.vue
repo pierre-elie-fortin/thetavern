@@ -15,9 +15,15 @@ let pathImage = ref('')
 
 // functions
 const onZoomImage = (value: iEvents) => {
+  backToTitle()
   zoom.value = true
   pathImage.value = value.image
   altImage.value = value.eventName
+}
+
+const backToTitle = () => {
+  let elmntToView = document.getElementById("events");
+  elmntToView?.scrollIntoView();
 }
 
 const onStopZoom = () => {
@@ -27,7 +33,7 @@ const onStopZoom = () => {
 
 <template>
   <div class="wrapper">
-    <h3>Nos événements</h3>
+    <h3 id="events">Nos événements</h3>
     <div class="media_content">
       <div class="content" v-for="event in events" :key="event.eventName">
         <div v-if="event.active && !zoom">
