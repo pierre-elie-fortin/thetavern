@@ -1,15 +1,28 @@
 <script setup lang="ts">
 import eventsData from '@/data/events.json';
+import {ref} from 'vue'
 
 interface iEvents {
   active: boolean | undefined
-  eventName: string | undefined
-  image: string | undefined
+  eventName: string
+  image: string
 }
 
 let events: iEvents[] = eventsData.eventList
+let zoom = ref(false)
+let altImage = ref('')
+let pathImage = ref('')
 
+// functions
+const onZoomImage = (value: iEvents) => {
+  zoom.value = true
+  pathImage.value = value.image
+  altImage.value = value.eventName
+}
 
+const onStopZoom = () => {
+  zoom.value = false
+}
 </script>
 
 <template>
@@ -17,9 +30,12 @@ let events: iEvents[] = eventsData.eventList
     <h3>Nos événements</h3>
     <div class="media_content">
       <div class="content" v-for="event in events" :key="event.eventName">
-        <div v-if="event.active">
-          <img class="image" :src="event.image" :alt="event.eventName"/>
+        <div v-if="event.active && !zoom">
+          <img class="image" @click="onZoomImage(event)" :src="event.image" :alt="event.eventName"/>
         </div>
+      </div>
+      <div v-if="zoom">
+        <img class="imageZoom" @click="onStopZoom" :src="pathImage" :alt="altImage"/>
       </div>
     </div>
   </div>
@@ -48,8 +64,15 @@ h3 {
 
   height: 250px;
   width: 250px;
-  box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.3);
-  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.imageZoom {
+  height: 350px;
+  width: 350px;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
 }
 
 @media (min-width: 768px) {
@@ -68,6 +91,13 @@ h3 {
   .image {
     height: 350px;
     width: 350px;
+  }
+
+  .imageZoom {
+    height: 450px;
+    width: 450px;
+    box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
   }
 }
 </style>
