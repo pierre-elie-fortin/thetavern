@@ -67,7 +67,9 @@ h3 {
 }
 
 .image {
-
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   height: 250px;
   width: 250px;
   box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.3);
@@ -75,6 +77,9 @@ h3 {
 }
 
 .imageZoom {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
   height: 350px;
   width: 350px;
   box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.3);
@@ -100,6 +105,9 @@ h3 {
   }
 
   .imageZoom {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
     height: 450px;
     width: 450px;
     box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.3);
