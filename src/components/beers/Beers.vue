@@ -91,19 +91,21 @@ h3 {
   margin-right: 8px;
 }
 
-@media (min-width: 768px) {
-
-
+@media only screen and (min-width: 600px) {
   .content {
-
     font-size: 18px;
-    margin: 0 250px 16px;
+    margin: 0 60px 16px ;
   }
 
-
-
-
+  @media only screen and (min-width: 950px) {
+    .content {
+      font-size: 18px;
+      margin: 0 200px 16px;
+    }
+  }
 }
+
+
 </style>
 
 
